@@ -1,0 +1,9 @@
+{
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/src/(.*)", "dest": "/src/$1" },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*\\.(css|js|html|ico|png|jpg))", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
