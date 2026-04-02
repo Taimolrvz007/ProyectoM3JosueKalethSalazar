@@ -1,0 +1,24 @@
+{
+  "name": "proyectom3josuekalethsalazar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "vitest": "^4.1.2"
+  },
+  "scripts": {
+  "test": "vitest"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taimolrvz007/ProyectoM3JosueKalethSalazar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Taimolrvz007/ProyectoM3JosueKalethSalazar/issues"
+  },
+  "homepage": "https://github.com/Taimolrvz007/ProyectoM3JosueKalethSalazar#readme"
+}
