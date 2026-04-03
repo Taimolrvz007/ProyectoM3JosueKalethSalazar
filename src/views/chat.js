@@ -14,28 +14,28 @@ export function renderChat() {
   const sendBtn = document.getElementById("sendBtn");
   const userInput = document.getElementById("userInput");
   const messagesDiv = document.getElementById("messages");
+  const history = [];
 
   sendBtn.onclick = async () => {
     const text = userInput.value.trim();
     if (!text) return;
-    
-    // Mensaje del usuario
+
     messagesDiv.innerHTML += `<div style="align-self: flex-end; background: #007bff; color: white; padding: 8px 12px; border-radius: 15px;">${text}</div>`;
     userInput.value = "";
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+    history.push({ role: "user", parts: [{ text }] });
 
     try {
       const response = await fetch("/api/functions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          messages: [{ role: "user", parts: [{ text: text }] }] 
-        })
+        body: JSON.stringify({ messages: history })
       });
 
       const data = await response.json();
-      
-      // Respuesta de Goku
+      history.push({ role: "model", parts: [{ text: data.reply }] });
+
       messagesDiv.innerHTML += `<div style="align-self: flex-start; background: #e9e9eb; padding: 8px 12px; border-radius: 15px;"><b>Goku:</b> ${data.reply}</div>`;
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
 

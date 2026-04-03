@@ -1,16 +1,34 @@
-/* TABLET (Bootstrap md) */
+/* TABLET (min-width: 768px) */
 @media (min-width: 768px) {
-  .contenedor {
+  /* Ajustamos el contenedor principal de cada vista */
+  #app.home-view, #app.chat-view, #app.about-view {
     padding: 20px;
     font-size: 16px;
   }
+
+  /* El chat se hace un poco más ancho en tablet */
+  #app.chat-view #chat-container {
+    width: 80%;
+  }
 }
-/* ORDENADOR (Bootstrap lg) */
+
+/* ORDENADOR / PC (min-width: 992px) */
 @media (min-width: 992px) {
-  .contenedor {
-    padding: 32px;
+  #app.home-view, #app.chat-view, #app.about-view {
+    padding: 40px;
     font-size: 18px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
+  }
+
+  /* En PC el chat no debe ser gigante, lo limitamos para que sea elegante */
+  #app.chat-view #chat-container {
+    width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Mejoramos la Home para PC */
+  #app.home-view h1 {
+    font-size: 3rem;
   }
 }

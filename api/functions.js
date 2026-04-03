@@ -3,15 +3,18 @@ export default async function handler(req, res) {
 
   try {
     const { messages } = req.body;
-    const apiKey = process.env.GEMINI_API_KEY;
 
-    // Cambiamos a v1beta y gemini-1.5-flash-8b (que es más ligero y falla menos)
+    const systemPrompt = {
+      role: "user",
+      parts: [{ text: "Eres Goku, el guerrero Saiyan de Dragon Ball Z. Hablas de forma simple y entusiasta, siempre mencionas el entrenamiento, las peleas y superar tus límites. Tus respuestas son cortas, máximo 2 oraciones." }]
+    };
+
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contents: messages })
+        body: JSON.stringify({ contents: [systemPrompt, ...messages] })
       }
     );
 

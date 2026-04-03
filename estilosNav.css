@@ -1,29 +1,19 @@
-/* --- Estilos para HOME --- */
-#app.home-view {
-    background-color: #ff9900; /* Naranja Goku */
-    background-image: url('nubes.png');
-    font-family: 'Arial Black', sans-serif;
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 15px;
 }
 
-#app.home-view h1 {
-    color: white;
-    text-shadow: 2px 2px #000;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* --- Estilos para CHAT --- */
-#app.chat-view {
-    background-color: #3e9a49; /* Oscuro moderno */
-    display: flex;
-    justify-content: center;
-}
-
-#app.chat-view #messages {
-    border: 2px solid #0055ff;
-    border-radius: 10px;
-}
-
-/* --- Estilos para ABOUT --- */
-#app.about-view {
-    background-color: #f0f0f0;
-    color: #333;
+@media (min-width: 992px) {
+  nav {
+    padding: 20px 100px; /* Más espacio a los lados en PC */
+    font-size: 1.2rem;
+  }
 }
