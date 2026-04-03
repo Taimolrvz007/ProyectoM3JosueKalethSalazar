@@ -53,6 +53,11 @@ project/
 ├── vercel.json
 ├── .env.example
 └── README.md
+└── Assets 
+    └──img1(resp1)
+    └──img2(resp2)
+    └──img3(resp3)
+    └──img4(resp4)
 ```
 
 ---
@@ -115,10 +120,38 @@ npm test
 ## Uso de IA en el desarrollo
 
 Durante el desarrollo se utilizó Claude (Anthropic) como herramienta de apoyo para:
-- Resolver errores de configuración en Vercel
-- Entender el patrón de routing SPA con History API
-- Estructurar la Serverless Function para Gemini
-correspondiendo un 40% de ayuda  de AI y un 60% de programacion a solas por parte del Programador
+- Resolver errores de configuración en Vercel.
+- Entender el patrón de routing SPA con History API.
+- Estructurar la Serverless Function para Gemini.
+- correspondiendo un 40% de ayuda de AI y un 60% de programacion a solas por parte del Programador
+
+### Prompt 1 - Routing SPA
+![Prompt routing](./assets/img1.png)
+
+### Respuesta 1
+![Respuesta routing](./assets/resp1.png)
+![Respuesta routing continuacion](./assets/resp1-1.png)
+
+### Prompt 2 - Historial de conversación
+![Prompt historial](./assets/img2.png)
+
+### Respuesta 2
+![Respuesta historial](./assets/resp2.png)
+![Respuesta historial continuacion](./assets/resp2-1.png)
+
+### Prompt 3 - Tests con Vitest
+![Prompt vitest](./assets/img3.png)
+
+### Respuesta 3
+![Respuesta vitest](./assets/resp3.png)
+![Respuesta vitest continuacion](./assets/resp3-1.png)
+
+### Prompt 4 - System Prompt de Goku
+![Prompt system prompt](./assets/img4.png)
+
+### Respuesta 4
+![Respuesta system prompt](./assets/resp4.png)
+![Respuesta system prompt continuacion](./assets/resp4-1.png)
 ---
 
 ## Casos de prueba verificados
