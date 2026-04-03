@@ -1,5 +1,6 @@
 export function renderChat() {
   const app = document.getElementById("app");
+  app.className = "chat-view";
   app.innerHTML = `
     <div id="chat-container" style="max-width: 600px; margin: auto; padding: 20px;">
       <div id="messages" style="height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; display: flex; flex-direction: column; gap: 10px; background: white;"></div>

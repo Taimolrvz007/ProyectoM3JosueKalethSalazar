@@ -1,3 +1,6 @@
+@import url(/dispositivos.css);
+@import url(/resetStyle.css);
+@import url(/estilosNav.css);
 #messages {
   background-color: rgb(255, 255, 255);
   color: black;
@@ -37,3 +40,13 @@
   border-radius: 10px;
   margin: 5px;
 }
+
+nav {
+  background-color: orangered;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  color: azure;
+
+}
+
