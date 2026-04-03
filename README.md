@@ -130,7 +130,7 @@ Durante el desarrollo se utilizó Claude (Anthropic) como herramienta de apoyo p
 
 ### Respuesta 1
 ![Respuesta routing](./assets/resp1.png)
-![Respuesta routing continuacion](./assets/resp1-1.png)
+
 
 ### Prompt 2 - Historial de conversación
 ![Prompt historial](./assets/img2.png)
