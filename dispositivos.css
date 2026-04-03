@@ -1,0 +1,16 @@
+/* TABLET (Bootstrap md) */
+@media (min-width: 768px) {
+  .contenedor {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+/* ORDENADOR (Bootstrap lg) */
+@media (min-width: 992px) {
+  .contenedor {
+    padding: 32px;
+    font-size: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
